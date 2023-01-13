@@ -11,9 +11,9 @@ const Skill = (props: SkillPropsType) => {
             <div className={s.icon}>
 
             </div>
-            <h3>React</h3>
+            <h3>{props.title}</h3>
             <span className={s.description}>
-    Wery cool proger using very mach hacks and features
+    {props.description}
 </span>
 
         </div>

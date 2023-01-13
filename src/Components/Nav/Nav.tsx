@@ -4,10 +4,10 @@ import s from './Nav.module.css'
 const Nav = () => {
     return (
         <div className={s.nav}>
-            <a href={''}>Main</a>
-            <a href={''}>Skills</a>
-            <a href={''}>Projects</a>
-            <a href={''}>Contacts</a>
+            <a href={'index.html#main'}>Main</a>
+            <a href={'index.html#skills'}>Skills</a>
+            <a href={'index.html#projects'}>Projects</a>
+            <a href={'index.html#contacts'}>Contacts</a>
         </div>
     );
 };

@@ -1,0 +1,49 @@
+.contactsBlock {
+    background-color: #a2738a;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.header {
+    border: 1px solid orange;
+    margin-bottom: 80px;
+}
+
+form.contact {
+    border: 1px solid orange;
+    display: table;
+    font-size: 38px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+div.contact {
+    display: table-row;
+    border: 1px solid orange;
+    margin-bottom: 40px;
+}
+
+label,
+input {
+    display: table-cell;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 1px solid yellow;
+}
+input,
+textarea{
+    max-width: 150px; /*с медиазапросами уберу*/
+}
+label {
+    padding-right: 10px;
+}
+
+
+button {
+    font-size: 38px;
+}
