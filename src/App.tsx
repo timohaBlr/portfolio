@@ -6,6 +6,9 @@ import Skills from "./Components/Skills/Skills";
 import Works from "./Components/Works/Works";
 import Contacts from "./Components/Contacts/Contacts";
 import Footer from "./Components/Footer/Footer";
+import {CounterPage} from "./Components/CounterPage/CounterPage";
+import {ClocksWithArrows} from "./Components/ClocksWithArrows/ClocksWithArrows";
+import SelectContainer from "./Components/Select/SelectContainer";
 
 function App() {
     return (
@@ -21,6 +24,18 @@ function App() {
                 <span id="contacts"/>
                 <Contacts/>
                 <Footer/>
+                <span id='counter'/> {/*temporary anchor*/}
+            </div>
+            <div className={'other'}>
+                <div>
+                    <CounterPage/>
+                    <span id='clocksWithArrows'/> {/*temporary anchor*/}</div>
+                <div style={{}}>
+                    <ClocksWithArrows/>
+                </div>
+                <div>
+                    <SelectContainer/>
+                    <span id='selectContainer'/> {/*temporary anchor*/}</div>
             </div>
         </div>
     );

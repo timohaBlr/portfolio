@@ -5,12 +5,13 @@ import puppey from './../../../Common/Images/Puppey_300x300.jpg'
 type WorkPropsType = {
     title: string
     description: string
+    link: string
 }
 const Work = (props: WorkPropsType) => {
     return (
         <div className={s.work}>
             <div className={s.image}>
-                <a href={'aa'}> <img src={puppey} alt={'work'}/></a>
+                <a href={props.link}> <img src={puppey} alt={'work'}/></a>
                            </div>
             <div className={s.description}>
                 <div className={s.text}>
