@@ -25,8 +25,7 @@ const Skills = () => {
                 <div className={s.items}>
                     {mappedSkills}
                 </div>
-
-
+            <a className={s.projectsLink} id="projects"/>
         </div>
     );
 };

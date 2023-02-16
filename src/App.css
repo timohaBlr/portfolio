@@ -1,18 +1,21 @@
 .App {
     position: relative;
-    background-color: rgb(223, 223, 223);
+    /*background-color: rgb(223, 223, 223);*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+a {
+    text-decoration: none;
+}
 .container{
     border: 1px solid red;
-    width: 90%;
-    box-shadow: 1em 0 .4em rgba(119, 75, 75, 0.07), -1em 0 .4em #DFDFDFFF;
+    /*width: 90%;*/
+    /*box-shadow: 1em 0 .4em rgba(119, 75, 75, 0.07), -1em 0 .4em #DFDFDFFF;*/
 }
-.other {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    margin-bottom: 200px;
-}
+/*.other {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 50px;*/
+/*    margin-bottom: 200px;*/
+/*}*/

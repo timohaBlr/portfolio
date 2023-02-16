@@ -8,8 +8,8 @@
     align-items: center;
     gap: 20px;
     border: 1px solid red;
+    position: relative;
 }
-
 
 
 .header {
@@ -25,9 +25,15 @@
     align-items: center;
     row-gap: 20px;
 }
-.item{
+
+.item {
     max-width: 480px;
     display: flex;
     border: 1px solid yellow;
     background-color: #91d7d9;
+}
+
+.contactsLink {
+    position: absolute;
+    bottom: 80px;
 }

@@ -9,34 +9,11 @@ import Footer from "./Components/Footer/Footer";
 import {CounterPage} from "./Components/CounterPage/CounterPage";
 import {ClocksWithArrows} from "./Components/ClocksWithArrows/ClocksWithArrows";
 import SelectContainer from "./Components/Select/SelectContainer";
+import {BobDylan} from "./Components/BobDylan/BobDylan";
 
 function App() {
-    return (
-        <div className="App">
-            <Header/>
-            <div className={'container'}>
-                <span id="main"/> {/*якори не корректно позиционированы из-за Header position: fixed*/}
+    return (<div>
                 <Main/>
-                <span id="skills"/>
-                <Skills/>
-                <span id="projects"/>
-                <Works/>
-                <span id="contacts"/>
-                <Contacts/>
-                <Footer/>
-                <span id='counter'/> {/*temporary anchor*/}
-            </div>
-            <div className={'other'}>
-                <div>
-                    <CounterPage/>
-                    <span id='clocksWithArrows'/> {/*temporary anchor*/}</div>
-                <div style={{}}>
-                    <ClocksWithArrows/>
-                </div>
-                <div>
-                    <SelectContainer/>
-                    <span id='selectContainer'/> {/*temporary anchor*/}</div>
-            </div>
         </div>
     );
 }
