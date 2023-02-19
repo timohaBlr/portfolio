@@ -1,0 +1,85 @@
+.skill {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*@media (min-width: 576px) {*/
+/*    .skill {*/
+/*        -webkit-box-flex: 0;*/
+/*        -ms-flex: 0 0 50%;*/
+/*        flex: 0 0 50%;*/
+/*        max-width: 50%;*/
+/*    }*/
+/*}*/
+
+/*@media (min-width: 768px) {*/
+/*    .skill {*/
+/*        -webkit-box-flex: 0;*/
+/*        -ms-flex: 0 0 33.333333%;*/
+/*        flex: 0 0 33.333333%;*/
+/*        max-width: 33.333333%;*/
+/*    }*/
+/*}*/
+
+.skillText {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.chartBar {
+    border-radius: 2px;
+    display: block;
+    height: 1px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 45px;
+    background: #555;
+}
+
+.itemProgress {
+    border-radius: 2px;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1%;
+    background-color: #ffb400;
+}
+
+.percent {
+    height: 32px;
+    margin-top: -41px;
+    position: absolute;
+    right: calc(100% - 40px);
+    width: 46px;
+    z-index: 10;
+    /*color: #fff;*/
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 31px;
+    top: 50%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffb400;
+    border: 1px solid #ffb400;
+}
+
+.arrow {
+    display: inline-block;
+    padding: 4px;
+    transform: translateY(33.5px) rotate(45deg) skew(3deg, 3deg) translateX(-27px);
+    /*background-color: #FFF;*/
+    bottom: 8px;
+    position: absolute;
+    border: 1px solid #ffb400;
+    border-width: 0 1px 1px 0;
+    background: #222;
+}

@@ -1,144 +1,63 @@
-#main {
+main#main {
     position: absolute;
     width: 100%;
-    overflow: hidden;
     height: 100%;
-    color: #eee;
 }
 
-#home {
-    background-image: url('https://istanbul-react.vercel.app/img/fullscreendark.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
+/*#main > section {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    overflow-x: hidden;*/
+/*    overflow-y: auto;*/
+/*    -webkit-transform: translate3d(100%, 0, 0);*/
+/*    transform: translate3d(100%, 0, 0);*/
+/*    z-index: 0;*/
+/*    opacity: 0;*/
+/*    background: #fff;*/
+/*    -webkit-transition: opacity 0s ease .6s, -webkit-transform .6s ease .6s;*/
+/*    transition: opacity 0s ease .6s, -webkit-transform .6s ease .6s;*/
+/*    transition: transform .6s ease .6s, opacity 0s ease .6s;*/
+/*    transition: transform .6s ease .6s, opacity 0s ease .6s, -webkit-transform .6s ease .6s;*/
+/*}*/
 
-#main > section {
-    position: absolute;
-    top: 0;
-    left: 0;
+.container {
     width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+    max-width: 1170px;
 }
 
-.mainTextContainer {
-    height: 100%;
-    width: 100%;
-    display: table;
-    margin-left: 50vw;
-    max-width: 550px;
+.active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    z-index: 1;
+    opacity: 1;
+    -webkit-transition: -webkit-transform .6s ease;
+    transition: -webkit-transform .6s ease;
+    transition: transform .6s ease;
+    transition: transform .6s ease, -webkit-transform .6s ease;
 }
 
-@media only screen and (max-width: 1100px) {
-    .mainTextContainer {
-        max-width: 500px;
+@media only screen and (min-width: 601px) {
+    .container {
+        width: 100%;
     }
 }
 
-.mainText {
-    /*z-index: 13;*/
-    position: relative;
-    text-align: left;
-    display: table-cell;
-    vertical-align: middle;
-    font-family: 'Open Sans', sans-serif;
+@media only screen and (min-width: 1025px) {
+    .container {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
-.mainText h3 {
-    font-weight: 400;
-    font-size: 19px;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    display: block;
-    line-height: 1.2;
+@media only screen and (min-width: 1199px) {
+    .container {
+        width: 100%;
+    }
 }
-
-.mainText h1 {
-    color: #fff;
-    font-size: 42px;
-    line-height: 42px;
-    font-weight: 700;
-    margin: 19px 0 10px;
-    white-space: nowrap;
-    position: relative;
-}
-
-.mainText p {
-    color: #eee;
-    margin: 11px 0 23px;
-    font-size: 16px;
-    line-height: 32px;
-    font-weight: 400;
-}
-
-.introduction {
-    color: #ffb400;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-}
-
-.callToActionsHome a:first-child {
-    margin-right: 25px;
-}
-
-.btn {
-    box-shadow: none !important;
-    border-radius: 26px;
-    font-weight: 500;
-    height: 46px;
-    line-height: 46px;
-    font-size: 15px;
-    text-transform: uppercase;
-    color: #fff;
-    padding: 0 33px;
-    outline: none !important;
-    overflow: hidden;
-    display: inline-block;
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: .5px;
-    border: 0;
-    background-color: #ffb400;
-}
-
-/*.btn:before {*/
-/*    position: absolute;*/
-/*    content: "";*/
-/*    top: 0;*/
-/*    height: 102%;*/
-/*    left: -25%;*/
-/*    width: 0%;*/
-/*    background-color: #555;*/
-/*    transform: skew(-22deg);*/
-/*    transition-duration: .6s;*/
-/*    z-index: 1;*/
-/*}*/
-.btn span {
-    position: relative;
-    z-index: 2;
-}
-
-.btn.btnSecondary {
-    color: #ffb400;
-    background: transparent;
-    border: 1px solid #ffb400;
-}
-
-.btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
-}
-
-/*.fa {*/
-/*    display: inline-block;*/
-/*    font: normal normal normal 14px/1 FontAwesome;*/
-/*    font-size: inherit;*/
-/*    text-rendering: auto;*/
-/*    -webkit-font-smoothing: antialiased;*/
-/*    -moz-osx-font-smoothing: grayscale;*/
-/*}*/
-

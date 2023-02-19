@@ -1,0 +1,23 @@
+
+.skills {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.header {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: uppercase;
+    grid-column-start: span 3;
+}
