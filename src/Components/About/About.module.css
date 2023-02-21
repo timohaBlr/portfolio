@@ -1,7 +1,14 @@
 #about {
     color: #FFFFFF;
+    position: absolute;
+    background: #222;
 }
-
+.container{
+    margin: 0 auto;
+    max-width: 1170px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 .pageTitle {
     padding: 60px 0 54px;
     position: relative;
@@ -73,7 +80,7 @@ img {
     display: block !important;
 }
 
-ul {
+.personalInfo ul {
     list-style: none;
     padding: 0;
     margin: 0;

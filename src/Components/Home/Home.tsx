@@ -8,7 +8,6 @@ import fone from'./../../Common/Images/fone.jpg'
 
 export const Home = () => {
     return (
-        // <main id={s.main}  className={s.main}>
             <section id={s.home} style={{backgroundImage: `url(${fone})`}}>
                 <div className={s.mainTextContainer}>
                     <div className={s.mainText}>
@@ -28,13 +27,13 @@ export const Home = () => {
                             crafted code and user-centric design. Hope you enjoy my Photoshop skills=)</p>
                         <div className={s.callToActionsHome}>
                             <div className={s.textLeft}>
-                                <a href={'#about'} className={s.btn +' '+ s.linkPortfolioOne}>
+                                <a href={'/about'} className={s.btn +' '+ s.linkPortfolioOne}>
                                     <span>
                                         <FontAwesomeIcon icon={faUser} className={s.fa}/> &nbsp;
                                          more about me
                                     </span>
                                 </a>
-                                <a href={'#work'} className={s.btn +' '+ s.btnSecondary +' '+ s.linkPortfolioTwo}>
+                                <a href={'/work'} className={s.btn +' '+ s.btnSecondary +' '+ s.linkPortfolioTwo}>
                                     <span>
                                         <FontAwesomeIcon icon={faSuitcase} className={s.fa}/> &nbsp;
                                         portfolio
@@ -45,7 +44,6 @@ export const Home = () => {
                     </div>
                 </div>
             </section>
-        // </main>
     );
 };
 

@@ -1,16 +1,19 @@
 import s from './Main.module.css'
 import React from 'react';
-import {About} from "../About/About";
-import {Home} from "../Home/Home";
+import {Navbar} from "../Navbar/Navbar";
+import { Outlet } from 'react-router-dom';
 
 export const Main = () => {
     return (
         <main id={s.main}>
-            <Home/>
+            {/*<Home/>*/}
             <div className={s.container + ' ' + s.active}>
-                <About/>
-
+                <Outlet/>
+                {/*<About/>*/}
+                {/*<Portfolio/>*/}
             </div>
+            {/*<Contact/>*/}
+            <Navbar/>
         </main>
     );
 };
