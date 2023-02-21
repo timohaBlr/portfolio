@@ -39,8 +39,8 @@ type ExperienceColumnPropsType = {
 }
 const ExperienceColumn: React.FC<ExperienceColumnPropsType> = (props) => {
 
-    const mappedItemsExp = props.items.map(item => {
-        return <Item item={item}/>
+    const mappedItemsExp = props.items.map((item, index) => {
+        return <Item key={index} item={item}/>
     })
     return (
         <div className={s.col}>

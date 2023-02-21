@@ -10,13 +10,13 @@ const skills = [
     {title: 'typescript', percent: 60},
     {title: 'redux', percent: 80},
     {title: 'material ui', percent: 60},
-    {title: 'storybook', percent: 40},
-    {title: 'photoshop', percent: 40},
+    {title: 'storybook', percent: 45},
+    {title: 'photoshop', percent: 45},
 ]
 
 export const Skills = () => {
     const mappedSkills = skills.map(skill => {
-        return  <Skill skill={skill}/>
+        return  <Skill key={skill.title} skill={skill}/>
     })
     return (
         <div className={s.skills}>
