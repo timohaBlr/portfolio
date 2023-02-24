@@ -129,9 +129,6 @@
     transition: color 0.2s;
 }
 
-.cdStretchyNav ul a span {
-    color: #555;
-}
 
 .cdStretchyNav ul a::after {
     /* navigation item icons */
@@ -144,7 +141,7 @@
     text-align: center;
     transform: translateY(-50%) scale(0);
     opacity: .6;
-    font-family: "FontAwesome";
+    font-family: "FontAwesome", sans-serif;
 }
 
 .cdStretchyNav ul a::before {
@@ -156,6 +153,7 @@
     top: 50%;
     left: 60px;
     transform: translateX(3px) translateY(-50%) scaleY(0);
+    background-color: #ffb400;
 }
 
 .cdStretchyNav ul li:first-of-type a::after {
@@ -222,26 +220,6 @@
     text-shadow: none;
 }
 
-.no-touch .cdStretchyNav.navIsVisible ul a:hover,
-.no-touch .cdStretchyNav.navIsVisible.lighter ul a:hover {
-    color: #ffffff;
-    background-color: initial;
-    opacity: 1;
-}
-
-.no-touch .cdStretchyNav.navIsVisible.lighter ul a:hover {
-    color: #999;
-}
-
-.no-touch .cdStretchyNav.navIsVisible ul a:hover:after,
-.no-touch .cdStretchyNav.navIsVisible.lighter ul a:hover:after {
-    opacity: 1;
-}
-
-.no-touch .cdStretchyNav.navIsVisible ul a:hover span {
-    transform: translateX(5px);
-}
-
 .cdStretchyNav.navIsVisible ul li:first-of-type a::after,
 .cdStretchyNav.navIsVisible ul li:first-of-type span {
     animation-delay: 0.05s;
@@ -299,7 +277,8 @@ keyframes
 .cdStretchyNav.navIsVisible ul li.active a span,
 .cdStretchyNav.navIsVisible ul li a:hover,
 .cdStretchyNav.navIsVisible ul li a:hover span {
-    color: #ffb400 !important;
+    color: #ffb400 ;
+    opacity: 0.8;
 }
 
 .cdStretchyNav ul a,
@@ -308,6 +287,6 @@ keyframes
 .cdStretchyNav.lighter-in-portfolio ul a span {
     color: rgba(255, 255, 255, .9);
 }
-.cdStretchyNav ul a::before{
-    background-color: #ffb400;
+.activeStyle,.activeStyle span {
+    color: #ffb400 !important;
 }

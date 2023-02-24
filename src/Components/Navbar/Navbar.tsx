@@ -1,6 +1,7 @@
-import React, {useState, MouseEvent} from 'react';
+import React from 'react';
 import s from './Navbar.module.css'
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import useOutsideClickListener from "../../Common/useOutsideClickListener";
 
 const navItems = [
     {title: 'Home', link: '/'},
@@ -10,35 +11,32 @@ const navItems = [
 ]
 
 export const Navbar = () => {
-    const [open, setOpen] = useState(false)
 
-    const onClickHandler = (event: MouseEvent<HTMLAnchorElement>) => {
-        // if (event.target !== document.getElementById('menu')) {
-        //     setOpen(false)
-        // }
-        setOpen(!open)
+    const {ref, isShow, setIsShow} = useOutsideClickListener(false)
+    const onClickHandler = () => {
+        setIsShow(!isShow)
     }
 
     const mappedItems = navItems.map((m, index) => {
         return <li key={index}>
-            <Link id={m.title} to={m.link} onClick={onClickHandler}>
-                <span>{m.title}</span>
-            </Link>
+            <NavLink id={m.title}
+                     to={m.link}
+                     className={({isActive}) => isActive
+                         ? s.activeStyle
+                         : undefined}>
+                < span> {m.title}</span>
+            </NavLink>
         </li>
     })
 
-    const burgerClassName = open
-        ? s.burger + ' ' + s.burgerOn
-        : s.burger
-    const navBarClassName = open
+    const navBarClassName = isShow
         ? s.cdStretchyNav + ' ' + s.navIsVisible
         : s.cdStretchyNav
 
 
-
     return (
-        <div className={navBarClassName} >
-            <a id={'menu'} className={s.cdNavTrigger} onClick={onClickHandler}>
+        <div className={navBarClassName}>
+            <a id={'menu'} className={s.cdNavTrigger} onClick={onClickHandler} ref={ref}>
                 <span aria-hidden> </span>
             </a>
             <ul id={s.nav}>

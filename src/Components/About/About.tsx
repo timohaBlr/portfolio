@@ -5,6 +5,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDownload} from "@fortawesome/free-solid-svg-icons/faDownload";
 import {Resume} from "./Resume/Resume";
 import {Column} from "./Column/Column";
+import aboutMe from '../../Common/Images/about-me.png'
 
 const list1 = [
     {title: 'First Name', value: 'Tsimafei'},
@@ -37,7 +38,7 @@ export const About = () => {
 
                 <div className={s.col}>
                     <div className={s.imageContainer}>
-                        <img src={'https://istanbul-react.vercel.app/img/dark-about.jpg'}/>
+                        <img src={aboutMe} alt={'me'}/>
                     </div>
                 </div>
 
