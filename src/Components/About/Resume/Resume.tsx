@@ -38,7 +38,7 @@ const itemsEdu = [
 
 export const Resume = () => {
     return (
-        <div>
+        <div className={s.container}>
             <div className={s.row}>
                 <ExperienceColumn items={itemsExp} title={'experience'}/>
                 <ExperienceColumn items={itemsEdu} title={'education'}/>

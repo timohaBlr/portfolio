@@ -1,9 +1,12 @@
+.outlet{
+    display: flex;
+    justify-content: center;
+}
+
 
 /*transitions between routes properties*/
 .appear {
     position: absolute;
-    left: 15px;
-    right: 15px;
 }
 
 .enter {

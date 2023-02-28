@@ -3,21 +3,31 @@
     position: relative;
     width: 100%;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
+    /*padding-right: 15px;*/
+    /*padding-left: 15px;*/
+    /*-webkit-box-flex: 0;*/
+    /*-ms-flex: 0 0 100%;*/
+    /*flex: 0 0 100%;*/
+    /*max-width: 1140px;*/
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+    /*grid-template-columns: repeat(3, auto);*/
 }
 
 .header {
-    padding-top: 50px;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+   }
+.header h2{
+    text-transform: uppercase;
+    font-weight: 600;
     margin-bottom: 50px;
     font-size: 23px;
-    font-weight: 600;
-    text-transform: uppercase;
-    grid-column-start: span 3;
+    padding-top: 50px;
 }

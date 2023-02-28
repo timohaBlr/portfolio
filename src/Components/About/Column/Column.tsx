@@ -10,7 +10,7 @@ type ColumnPropsType = {
 }
 export const Column: React.FC<ColumnPropsType> = (props) => {
     return (
-        <div className={s.col}>
+        <div >
             <ul>
                 {props.list.map((m, index) => {
                     return <li key={index}>

@@ -3,21 +3,7 @@
     position: relative;
 }
 
-@media (max-width: 767px) {
-    .pageTitle {
-        padding: 55px 0 49px;
-    }
-}
-@media (max-width: 576px) {
-    .pageTitle h2, .pageTitle, .titleHeadSubtitle{
-        padding: 0 24px;
-    }
-}
-@media (max-width: 480px) {
-    .pageTitle{
-        font-size: 35px;
-    }
-}
+
 .textCenter {
     text-align: center !important;
 }
@@ -67,5 +53,27 @@ h2 span {
     width: 30px;
     background-color: #ffb400;
 }
+@media only screen and (max-width: 1024px) {
+    .titleHeadSubtitle:before, .titleHeadSubtitle:after {
+        display: none;
+    }
+}
 
-
+@media (max-width: 767px) {
+    .pageTitle {
+        padding: 55px 0 49px;
+    }
+}
+@media (max-width: 576px) {
+    .pageTitle h2, .titleHeadSubtitle{
+        padding: 0 24px;
+    }
+}
+@media (max-width: 480px) {
+    .pageTitle h2 {
+        font-size: 35px;
+    }
+    .titleHeadSubtitle {
+        font-size: 14px;
+    }
+}

@@ -1,3 +1,9 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
 .row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7,13 +13,15 @@
     margin-right: -15px;
     margin-left: -15px;
 }
-.col{
+
+.col {
     position: relative;
     width: 100%;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
 }
+
 @media (min-width: 1200px) {
     .col {
         -webkit-box-flex: 0;
@@ -22,10 +30,26 @@
         max-width: 50%;
     }
 }
-.header{
+
+.header {
     color: #fff;
     margin-bottom: 50px;
     font-size: 23px;
     font-weight: 600;
     text-transform: uppercase;
 }
+@media only screen and (max-width: 1024px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
+        width: 100%;
+    }
+}
+
+

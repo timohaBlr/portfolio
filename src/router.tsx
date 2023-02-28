@@ -1,5 +1,4 @@
-import {createBrowserRouter, createRoutesFromElements, RoutesProps} from "react-router-dom";
-import {Route} from "react-router";
+import {createBrowserRouter} from "react-router-dom";
 import App from "./App";
 import {Home} from "./Components/Home/Home";
 import {About} from "./Components/About/About";
@@ -27,13 +26,17 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <App/>,
-        children: routes.map((route) => ({
-            index: route.path === '/',
-            path: route.path === '/' ? undefined : route.path,
-            element: route.element,
-        })),
+        errorElement: <ErrorPage/>,
+        children: [
+            {index: true, element: <Home/>},
+            ...routes.map((route) => ({
+                // index: route.path === '/',
+                path: route.path === '/' ? undefined : route.path,
+                element: route.element,
+            }))],
     },
 ])
+
 /*
 const router = createBrowserRouter(
     createRoutesFromElements(

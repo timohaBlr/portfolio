@@ -24,46 +24,54 @@ const list2 = [
     {title: 'Address', value: 'Minsk'},
 ]
 
-const title={
-    header: ['about','me'],
+const title = {
+    header: ['about', 'me'],
     span: 'I design and code beautiful things, and I love what I do.'
 }
 
 export const About = () => {
     return (
         <section id={s.about}>
-            <div className={s.container}>
             <Title header={title.header} span={title.span}/>
-            <div className={s.row + ' ' + s.personalInfo}>
 
-                <div className={s.col}>
-                    <div className={s.imageContainer}>
-                        <img src={aboutMe} alt={'me'}/>
+            <div className={s.container}>
+                <div className={s.row + ' ' + s.personalInfo}>
+
+                    <div className={s.col}>
+                        <div className={s.imageContainer}>
+                            <img src={aboutMe} alt={'me'}/>
+                        </div>
+                        <p>
+                            I'm a Freelance UI/UX Designer and Developer based in London, England. I strives to build
+                            immersive and beautiful web applications through carefully crafted code and user-centric
+                            design.
+                        </p>
                     </div>
-                </div>
 
-                <div className={s.row + ' ' + s.col}>
-
-                    <Column list={list1}/>
-                    <Column list={list2}/>
-
-                    <div className={s.col + ' ' + s.resumeBtnContainer}>
-                        <a href="#" className={s.btn}><span>
+                    <div className={s.row + ' ' + s.col}>
+                        <div className={s.col}>
+                            <Column list={list1}/>
+                        </div>
+                        <div className={s.col}>
+                            <Column list={list2}/>
+                        </div>
+                        <div className={s.col + ' ' + s.resumeBtnContainer}>
+                            <a href="#" className={s.btn}><span>
                             <FontAwesomeIcon icon={faDownload} className={s.fa}/>
                             download my cv</span>
-                        </a>
+                            </a>
+                        </div>
                     </div>
 
                 </div>
 
-            </div>
+                <div className={s.textCenter}>
+                    <hr className={s.aboutSection}/>
+                </div>
 
-            <div className={s.textCenter}>
-                <hr className={s.aboutSection}/>
-            </div>
 
+            </div>
             <Resume/>
-            </div>
         </section>
     );
 };

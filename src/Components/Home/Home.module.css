@@ -73,10 +73,6 @@
     color: #ffb400;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-}
 
 .callToActionsHome a:first-child {
     margin-right: 25px;

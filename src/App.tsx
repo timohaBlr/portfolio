@@ -1,19 +1,16 @@
 import React from 'react';
 import './App.css';
-import s from './App.module.css'
-import { useLocation, useOutlet} from "react-router-dom";
+import styles from './App.module.css'
+import {useLocation, useOutlet} from "react-router-dom";
 import {Navbar} from "./Components/Navbar/Navbar";
-import { CSSTransition, SwitchTransition} from "react-transition-group";
+import {CSSTransition, SwitchTransition} from "react-transition-group";
 import {routes} from "./router";
 
 function App() {
 
     const location = useLocation()
     const currentOutlet = useOutlet()
-    // const [isLoading, setIsLoading] = useState(false)
-    const { nodeRef } =  routes.find((route) => route.path === location.pathname) ?? {}
-
-
+    const {nodeRef} = routes.find((route) => route.path === location.pathname) ?? {}
 
     return (<>
 
@@ -24,11 +21,12 @@ function App() {
                     key={location.pathname}
                     nodeRef={nodeRef}
                     timeout={300}
-                    classNames={{...s}}
+                    classNames={{...styles}}
                     unmountOnExit
                 >
                     {(state) => (
-                        <div ref={nodeRef} >
+                        <div className={styles.outlet}
+                            ref={nodeRef}>
                             {currentOutlet}
                         </div>
                     )}
