@@ -21,7 +21,7 @@ export const routes: RouteProps[] = [
     {path: '/work', name: 'Portfolio', element: <Portfolio/>, nodeRef: createRef()},
     {path: '/contact', name: 'Contact', element: <Contact/>, nodeRef: createRef(),},
 ]
-
+const width = window.screen.width
 const router = createBrowserRouter([
     {
         path: '/',

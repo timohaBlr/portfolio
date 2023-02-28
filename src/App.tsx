@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import styles from './App.module.css'
-import {useLocation, useOutlet} from "react-router-dom";
+import {Navigate, redirect, useLocation, useOutlet} from "react-router-dom";
 import {Navbar} from "./Components/Navbar/Navbar";
 import {CSSTransition, SwitchTransition} from "react-transition-group";
 import {routes} from "./router";
@@ -26,7 +26,7 @@ function App() {
                 >
                     {(state) => (
                         <div className={styles.outlet}
-                            ref={nodeRef}>
+                             ref={nodeRef}>
                             {currentOutlet}
                         </div>
                     )}

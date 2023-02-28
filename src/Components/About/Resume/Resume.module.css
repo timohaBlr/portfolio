@@ -22,6 +22,14 @@
     padding-left: 15px;
 }
 
+.header {
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 @media (min-width: 1200px) {
     .col {
         -webkit-box-flex: 0;
@@ -31,17 +39,18 @@
     }
 }
 
-.header {
-    color: #fff;
-    margin-bottom: 50px;
-    font-size: 23px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
 @media only screen and (max-width: 1024px) {
     .container {
         padding-left: 30px;
         padding-right: 30px;
+    }
+}
+@media (min-width: 768px) {
+    .col {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }
 @media (max-width: 576px) {
