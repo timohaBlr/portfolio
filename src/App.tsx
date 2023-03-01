@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './App.css';
 import styles from './App.module.css'
-import {Navigate, redirect, useLocation, useOutlet} from "react-router-dom";
+import {  useLocation, useOutlet} from "react-router-dom";
 import {Navbar} from "./Components/Navbar/Navbar";
 import {CSSTransition, SwitchTransition} from "react-transition-group";
 import {routes} from "./router";
@@ -12,7 +12,8 @@ function App() {
     const currentOutlet = useOutlet()
     const {nodeRef} = routes.find((route) => route.path === location.pathname) ?? {}
 
-    return (<>
+
+  return (<>
 
             <Navbar/>
 

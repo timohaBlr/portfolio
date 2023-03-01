@@ -5,23 +5,20 @@
 }
 
 .container {
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
     margin: 0 auto;
     max-width: 1170px;
+    width: 100%;
+    padding-right: 24px;
+    padding-left: 24px;
 }
 
-@media only screen and (max-width: 1024px) {
-    .container {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
+.container > div {
+    padding: 0 15px;
 }
 
 .row {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     margin-right: -15px;
     margin-left: -15px;
     flex-direction: row;
@@ -30,16 +27,27 @@
     color: #eee;
 }
 
-.colR, .colL {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    font-size: 16px;
+@media (min-width: 576px) {
+    .container {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
 }
-.contactTitleIcon img{
-    width: 5%;
+
+@media (min-width: 768px) {
+    .row {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+
+/*ContactMedia */
+
+.contactTitleIcon {
+    display: inline-block;
+}
+.contactTitleIcon img {
+    width: 20px;
 }
 
 .customList {
@@ -87,12 +95,6 @@
     margin-top: 28px;
 }
 
-@media only screen and (max-width: 1024px) {
-    .social {
-        margin-bottom: 20px;
-    }
-}
-
 .social h6 {
     text-transform: capitalize;
     display: block;
@@ -114,8 +116,9 @@
     float: left;
     margin-bottom: 10px;
     margin-right: 15px;
-
 }
+
+
 
 .social ul li a {
     width: 35px;
@@ -132,7 +135,8 @@
     border: 1px solid #ffb400;
 
 }
-.social ul li a :hover  {
+
+.social ul li a :hover {
     transform: rotateY(180deg);
     color: #fff;
 }
@@ -144,3 +148,5 @@
     -webkit-transition: 0.4s;
     transition: 0.4s;
 }
+
+

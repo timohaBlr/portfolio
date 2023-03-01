@@ -3,9 +3,9 @@ import App from "./App";
 import {Home} from "./Components/Home/Home";
 import {About} from "./Components/About/About";
 import {Portfolio} from "./Components/Portfolio/Portfolio";
-import {Contact} from "./Components/Contact/Contact";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import {createRef, ReactNode, RefObject} from "react";
+import {Contact} from "./Components/ContactGrid/Contact";
 
 
 type RouteProps = {
@@ -21,7 +21,6 @@ export const routes: RouteProps[] = [
     {path: '/work', name: 'Portfolio', element: <Portfolio/>, nodeRef: createRef()},
     {path: '/contact', name: 'Contact', element: <Contact/>, nodeRef: createRef(),},
 ]
-const width = window.screen.width
 const router = createBrowserRouter([
     {
         path: '/',

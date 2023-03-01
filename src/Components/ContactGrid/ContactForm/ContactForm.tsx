@@ -37,13 +37,11 @@ export const ContactForm = () => {
             }}
         >
             <Form className={s.form}>
-                {/*<label htmlFor="firstName">First Name</label>*/}
+
                 <div className={s.email}>
                     <FontAwesomeIcon icon={faEnvelope} className={s.fa}/>
                     <Field id="firstName" name="firstName" placeholder="YOUR NAME"/>
                 </div>
-
-                {/*<label htmlFor="email"></label>*/}
 
                 <div className={s.email}>
                     <FontAwesomeIcon icon={faUser} className={s.fa}/>
@@ -55,7 +53,6 @@ export const ContactForm = () => {
                     />
                 </div>
 
-                {/*<label htmlFor="message">your message</label>*/}
                 <div className={s.message}>
                     <FontAwesomeIcon icon={faComments} className={s.fa}/>
                     <Field id="message" name="message" placeholder="YOUR MESSAGE" as={'textarea'}/>

@@ -8,7 +8,7 @@
 
 .form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 30px;
 }
 
@@ -17,8 +17,6 @@
     margin-bottom: 30px;
     width: 100%;
     min-height: 1px;
-    /*padding-right: 15px;*/
-    /*padding-left: 15px;*/
 }
 .email .fa, .message .fa{
     position: absolute;
@@ -45,9 +43,6 @@
     background: #333;
     border: 1px solid #444;
     color: #fff;
-}
-.message{
-    grid-column-start: span 2;
 }
 
 .message textarea{
@@ -94,7 +89,7 @@
     top: 0;
     height: 102%;
     left: -25%;
-    width: 0%;
+    width: 0;
     background-color: #555;
     transform: skew(-22deg);
     transition-duration: .6s;
@@ -106,4 +101,12 @@
 }
 .fa{
     padding-right: 11px;
+}
+@media (min-width: 1200px) {
+    .form{
+        grid-template-columns: 1fr 1fr;
+    }
+    .message, .submit{
+        grid-column-start: span 2;
+    }
 }
