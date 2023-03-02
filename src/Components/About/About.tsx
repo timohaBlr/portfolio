@@ -1,11 +1,11 @@
 import React from 'react';
 import {Title} from "../Title/Title";
 import s from './About.module.css'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDownload} from "@fortawesome/free-solid-svg-icons/faDownload";
 import {Resume} from "./Resume/Resume";
 import {Column} from "./Column/Column";
 import aboutMe from '../../Common/Images/about-me.png'
+import Button from "../../Common/Button/Button";
 
 const list1 = [
     {title: 'First Name', value: 'Tsimafei'},
@@ -52,11 +52,8 @@ export const About = () => {
                         <div className={s.col}>
                             <Column list={list2}/>
                         </div>
-                        <div className={s.col + ' ' + s.resumeBtnContainer}>
-                            <a href="#" className={s.btn}><span>
-                            <FontAwesomeIcon icon={faDownload} className={s.fa}/>
-                            download my cv</span>
-                            </a>
+                        <div className={s.button}>
+                            <Button name={'download my cv'} icon={faDownload}/>
                         </div>
                     </div>
 

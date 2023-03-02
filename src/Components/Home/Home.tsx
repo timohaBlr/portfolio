@@ -1,20 +1,31 @@
 import React, {useEffect, useState} from 'react';
 import s from './Home.module.css'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faUser} from "@fortawesome/free-solid-svg-icons/faUser";
 import {faSuitcase} from "@fortawesome/free-solid-svg-icons/faSuitcase";
 import ReactTypingEffect from 'react-typing-effect';
 import fone from './../../Common/Images/fone.jpg'
-import {NavLink} from "react-router-dom";
+import Button from "../../Common/Button/Button";
+import {useOutletContext} from "react-router-dom";
+import {isHomeContextType} from "../../App";
 
 export const Home: React.FC = () => {
 
-   return (
-        <section id={s.home} style={{backgroundImage: `url(${fone})`}}>
+
+    const isHome = useOutletContext<isHomeContextType>()
+
+    useEffect(() => {
+        isHome.setIsHome(true)
+        return () => {
+            isHome.setIsHome(false)
+        }
+    }, [])
+
+    return (
+        <section id={s.home}>
             <div className={s.mainTextContainer}>
                 <div className={s.mainText}>
                     <h3>Hi there !</h3>
-                    <h1 className={s.ahHeadline}>I'm &nbsp;
+                    <h1>I'm <br/>
                         <ReactTypingEffect
                             text={["Tsimafey Haiduk", "A web developer"]}
                             className={s.introduction}
@@ -27,21 +38,9 @@ export const Home: React.FC = () => {
                     </h1>
                     <p>I strives to build immersive and beautiful web applications through carefully
                         crafted code and user-centric design. Hope you enjoy my Photoshop skills=)</p>
-                    <div className={s.callToActionsHome}>
-                        <div className={s.textLeft}>
-                            <NavLink to={'/about'} className={s.btn + ' ' + s.linkPortfolioOne}>
-                                    <span>
-                                        <FontAwesomeIcon icon={faUser} className={s.fa}/> &nbsp;
-                                        more about me
-                                    </span>
-                            </NavLink>
-                            <NavLink to={'/work'} className={s.btn + ' ' + s.btnSecondary + ' ' + s.linkPortfolioTwo}>
-                                    <span>
-                                        <FontAwesomeIcon icon={faSuitcase} className={s.fa}/> &nbsp;
-                                        portfolio
-                                    </span>
-                            </NavLink>
-                        </div>
+                    <div className={s.buttons}>
+                        <Button name={'more about me'} icon={faUser} path={'/about'}/>
+                        <Button name={'portfolio'} icon={faSuitcase} path={'/work'} outlined/>
                     </div>
                 </div>
             </div>
@@ -50,9 +49,8 @@ export const Home: React.FC = () => {
 };
 
 
-
 export const useWindowSize = () => {
-    const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
+    const [windowSize, setWindowSize] = useState({width: 0, height: 0});
     useEffect(() => {
         const handleResize = () => {
             setWindowSize({

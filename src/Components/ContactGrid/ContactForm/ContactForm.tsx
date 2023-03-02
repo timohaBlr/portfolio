@@ -6,6 +6,7 @@ import {faPaperPlane} from "@fortawesome/free-solid-svg-icons/faPaperPlane";
 import {faUser} from "@fortawesome/free-solid-svg-icons/faUser";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons/faEnvelope";
 import {faComments} from "@fortawesome/free-solid-svg-icons/faComments";
+import Button from "../../../Common/Button/Button";
 
 type Values = {
     firstName: string;
@@ -59,12 +60,7 @@ export const ContactForm = () => {
                 </div>
 
                 <div className={s.submit}>
-                    <button className={s.btn} type="submit">
-                        <span>
-                            <FontAwesomeIcon icon={faPaperPlane} className={s.fa}/>
-                            Send Message
-                        </span>
-                    </button>
+                    <Button name={'Send Message'} icon={faPaperPlane}/>
                 </div>
 
             </Form>

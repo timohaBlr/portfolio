@@ -1,38 +1,22 @@
 
-
 #home {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-color: #0b0d14;
     min-height: 100vh;
     position: absolute;
     width: 100%;
     display: flex;
     align-items: center;
-}
-
-#main > section {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    justify-content: center;
 }
 
 .mainTextContainer {
     height: 100%;
     width: 100%;
     display: table;
-    margin-left: 50vw;
     max-width: 550px;
+    padding: 0 15px;
 }
 
-@media only screen and (max-width: 1100px) {
-    .mainTextContainer {
-        max-width: 500px;
-    }
-}
 
 .mainText {
     position: relative;
@@ -45,7 +29,7 @@
 .mainText h3 {
     font-weight: 400;
     font-size: 19px;
-    margin-top: 0;
+    margin-top: 2rem;
     margin-bottom: 0.5rem;
     display: block;
     line-height: 1.2;
@@ -53,12 +37,13 @@
 
 .mainText h1 {
     color: #fff;
-    font-size: 42px;
-    line-height: 42px;
+    font-size: 34px;
+    line-height: 34px;
     font-weight: 700;
     margin: 19px 0 10px;
     white-space: nowrap;
     position: relative;
+
 }
 
 .mainText p {
@@ -73,64 +58,54 @@
     color: #ffb400;
 }
 
-
-.callToActionsHome a:first-child {
-    margin-right: 25px;
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.btn {
-    box-shadow: none !important;
-    border-radius: 26px;
-    font-weight: 500;
-    height: 46px;
-    line-height: 46px;
-    font-size: 15px;
-    text-transform: uppercase;
-    color: #fff;
-    padding: 0 33px;
-    outline: none !important;
-    overflow: hidden;
-    display: inline-block;
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: .5px;
-    border: 0;
-    background-color: #ffb400;
+.buttons > button {
+    margin: 10px 15px 0 15px;
 }
 
-/*.btn:before {*/
-/*    position: absolute;*/
-/*    content: "";*/
-/*    top: 0;*/
-/*    height: 102%;*/
-/*    left: -25%;*/
-/*    width: 0%;*/
-/*    background-color: #555;*/
-/*    transform: skew(-22deg);*/
-/*    transition-duration: .6s;*/
-/*    z-index: 1;*/
-/*}*/
-.btn span {
-    position: relative;
-    z-index: 2;
+@media only screen and (max-width: 408px) {
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
-.btn.btnSecondary {
-    color: #ffb400;
-    background: transparent;
-    border: 1px solid #ffb400;
+@media (min-width: 768px) {
+    .mainTextContainer {
+        margin-left: 40vw;
+
+    }
+
+    .mainText h1 {
+        font-size: 42px;
+        line-height: 42px;
+    }
+
+    #home {
+        background-image: url("../../Common/Images/fone.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    br {
+        display: none;
+    }
 }
 
-.btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
+@media only screen and (min-width: 1024px) {
+    .mainTextContainer {
+        margin-left: 50vw;
+        padding: 0;
+    }
 }
 
-/*.fa {*/
-/*    display: inline-block;*/
-/*    font: normal normal normal 14px/1 FontAwesome;*/
-/*    font-size: inherit;*/
-/*    text-rendering: auto;*/
-/*    -webkit-font-smoothing: antialiased;*/
-/*    -moz-osx-font-smoothing: grayscale;*/
-/*}*/
+
 

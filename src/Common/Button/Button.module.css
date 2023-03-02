@@ -1,0 +1,75 @@
+.btn {
+    border-radius: 26px;
+    text-transform: uppercase;
+    padding: 0 20px;
+    border: 0;
+    background-color: #ffb400;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 46px;
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: .5px;
+    font-family: 'Poppins', sans-serif;
+}
+.btn {
+    padding: 0 20px;
+    border: 0;
+    background-color: #ffb400;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 46px;
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: .5px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: none !important;
+    border-radius: 26px;
+    height: 46px;
+    text-transform: uppercase;
+    outline: none !important;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btnSecondary {
+    background: transparent;
+    border: 1px solid #ffb400;
+    color: #ffb400;
+}
+.btnSecondary:hover{
+    color: #eeeeee;
+}
+.btn:hover:before {
+    width: 180%;
+}
+.btn:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    height: 102%;
+    left: -25%;
+    width: 0;
+    background-color: #555;
+    transform: skew(-22deg);
+    transition-duration: .6s;
+    z-index: 1;
+}
+.btnSecondary:before{
+    background-color: #ffb400;
+}
+.btn span {
+    position: relative;
+    z-index: 2;
+}
+
+
+

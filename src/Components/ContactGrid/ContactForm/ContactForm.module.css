@@ -52,56 +52,6 @@
 .submitForm {
     padding-left: 0;
 }
-.btn {
-    box-shadow: none !important;
-    border-radius: 26px;
-    font-weight: 500;
-    height: 46px;
-    line-height: 46px;
-    font-size: 15px;
-    text-transform: uppercase;
-    color: #fff;
-    padding: 0 33px;
-    outline: none !important;
-    overflow: hidden;
-    display: inline-block;
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: .5px;
-    border: 0;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    background-color: #ffb400;
-    cursor: pointer;
-}
-.btn:hover:before {
-    width: 180%;
-}
-.btn:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    height: 102%;
-    left: -25%;
-    width: 0;
-    background-color: #555;
-    transform: skew(-22deg);
-    transition-duration: .6s;
-    z-index: 1;
-}
-.btn span {
-    position: relative;
-    z-index: 2;
-}
-.fa{
-    padding-right: 11px;
-}
 @media (min-width: 1200px) {
     .form{
         grid-template-columns: 1fr 1fr;
